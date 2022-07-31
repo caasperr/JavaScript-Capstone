@@ -103,6 +103,15 @@ nav ul li a::before {
   transition: all 0.5s;
 }
 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
 nav ul li a:hover {
   color: #555;
 }
@@ -112,6 +121,10 @@ nav.blend ul li a {
   border-radius: 5px;
   overflow: hidden;
   z-index: 1;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
 nav.blend ul li a:hover {
@@ -153,8 +166,39 @@ nav.blend ul li a:hover::before {
   width: 100%;
 }
 
+.NavMobile {
+  display: none;
+}
+
 .blend {
   background-color: #212121;
+  justify-content: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
 }
 
 /* Comment modal */
@@ -303,12 +347,12 @@ footer {
 }
 
 .grid-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
   margin-top: 60px;
   margin-bottom: 90px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-around;
-  justify-items: center;
   gap: 50px;
 }
 
@@ -327,8 +371,9 @@ img {
 
 .logo img {
   height: auto;
-  width: 250px;
+  width: 200px;
   border-radius: 15px;
+  transition: margin-left 0.5s;
 }
 
 .logo {
@@ -635,4 +680,32 @@ button:active {
 
 .meal-details {
   opacity: 0.4;
+}
+
+@media (max-width: 960px) {
+  .NavDesktop {
+    display: none;
+  }
+
+  .NavMobile {
+    display: flex;
+  }
+
+  .product-desc {
+    grid-template-columns: auto;
+  }
+
+  .fetch-comments {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -12,35 +12,67 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/Favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/Favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/Favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/Favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/Favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/Favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <title>CHOPS AND HOPS</title>
   </head>
   <body>
-    <main>
-      <!-- header -->
+    <!-- header -->
 
-      <header>
-        <nav class="blend">
-          <div class="logo"><img id="logo"></div>
-          <ul>
-            <li><a href="">All(<span id="dish-count">0</span>)</a></li>
-            <li><a href="">Fast Food</a></li>
-            <li><a href="">Slow Food</a></li>
-        </nav>
-      </header>
+    <header>
+      <nav class="blend">
+        <ul class="NavDesktop">
+          <li>
+            <a href="">All(<span id="dish-count">0</span>)</a>
+          </li>
+          <li><a href="">Fast Food</a></li>
+          <div class="logo"><img id="logo" /></div>
+          <li><a href="">Slow Food</a></li>
+          <li><a href="">Chinese Food</a></li>
+        </ul>
 
-      <!-- main-page -->
+        <div class="logo NavMobile"><img id="logoMob"/></div>
 
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+          <a href="#">All</a>
+          <a href="#">Slow Food</a>
+          <a href="#">Fast Food</a>
+          <a href="#">Chinese Food</a>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- main-page -->
+    <main id="main">
       <section class="grid-div"></section>
 
       <!-- Comment pop up Start -->
       <section class="comment-modal border full" id="comment-modal">
-       <!-- Fetching data from JS -->
-      </section> 
+        <!-- Fetching data from JS -->
+      </section>
       <div id="overlay"></div>
       <!-- Comment pop up END-->
     </main>

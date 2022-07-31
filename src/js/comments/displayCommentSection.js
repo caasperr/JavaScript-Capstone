@@ -43,8 +43,8 @@ const renderData = (element) => {
     <label for="name" class="form__label">Name</label>
 
     <div class="add-comment-form">
-      <input type="input" class="form__field" placeholder="Your insights" name="textBox" id="comment" required/>
-      <label for="name" class="form__label">Your insights</label>
+      <input type="input" class="form__field" placeholder="Comment" name="textBox" id="comment" required/>
+      <label for="name" class="form__label">Comment</label>
     </div>
       <div id="message-div">
     </div>
